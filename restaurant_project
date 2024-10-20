@@ -1,0 +1,30 @@
+menu = {'pizza' : 90,
+        'burger' : 70,
+        'breadSandwich' : 40,
+        'masala_Dosa' : 45,
+        'idli' : 30,
+        'sambhar_bada': 45,
+        'coffee': 60
+      }
+
+print("Welcome our Restaurant")
+print("pizza':Rs-90\nBurger:Rs-70\nBreadSandwich-40\nMasala_Dosa:Rs-45\nCoffee-Rs-60")
+
+order_tot = 0
+item1 = input("Enter ur order: ")
+if item1 in menu:
+    order_tot +=  menu[item1]
+     
+    print(f"your item {item1} is added in ur order")
+else:
+    print(f"please! select menu item")
+next_order = input("Enter more order if u want (yes/no):")
+if next_order == "yes":
+    item2 = input("Enter ur order")
+    if item2 in menu:
+        order_tot += menu[item2]
+        print(f"your item is added in ur order")
+    else:
+        print(f"please select menu item")
+print(f"total amnt of items to pay is {order_tot}")        
+    
