@@ -1,0 +1,46 @@
+contacts={ }
+while True:
+    print("\nCONTACT BOOK APP")
+    print("1.Create Contact")
+    print("2.Update Contact")
+    print("3.Delete Contact")
+    print("4.Count Contact")
+    print("5.Exit Contact")
+    
+    choice = int(input("Enter ur choice ="))
+    if choice==1:
+        name=input("Enter name =")
+        if name in contacts:
+            print(f"contact name {name} is alraedy exists!")
+        else:
+            age = int(input("Enter age="))
+            mobile= int(input("Enter mobile number="))
+            contacts[name]={"age":age,"mobile":mobile}
+            print(f"Contact name {name} created susseccfully")
+
+    elif choice ==2:
+        name=input("Enter name =")
+        if name in contacts:
+            contacts[name]={"age":age,"mobile":mobile}
+            age = int(input("Enter age="))
+            mobile= int(input("Enter mobile number="))
+            print(f"contact {mobile} and age {age} successfully updated")
+        else:
+            print("contact not found")
+
+    elif choice==3:
+        name=input("Enter name=")
+        if name in contacts:
+            del contacts[name]
+            print(f"contact{name} deleted successfully!")
+        else:
+            print("contact not found")
+
+    elif choice==4:
+        print(f"Total contact number is len{contacts}")
+
+    elif choice==5:
+        print("Exit program")
+        break
+    else:
+        print("invalid input")
